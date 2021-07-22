@@ -1,0 +1,13 @@
+﻿read -p "Enter KTU Roll Number: " num 
+NUMBER=$(echo $num | grep -o -E '[0-9]+')
+echo "${num//[a-z,.]/}"
+n=2
+sum = 0
+while [ $n -le 5 ]
+do
+a=`echo $num | cut -c $n`
+echo $a 
+n=`expr $n + 2`
+sum=`expr $sum + $n`
+done
+ echo $sum
